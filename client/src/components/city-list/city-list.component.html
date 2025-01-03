@@ -1,0 +1,7 @@
+<div *ngIf="getCityKeys().length > 0" class="data-container">
+  <data-card
+    *ngFor="let city of getCityKeys()"
+    [selectedCityData]="cities[city]"
+    class="w-1/2 card-data"
+  />
+</div>

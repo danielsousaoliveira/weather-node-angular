@@ -1,0 +1,26 @@
+.div-card {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.div-width-half {
+  width: 49%;
+}
+
+.div-width-full {
+  width: 100%;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.body-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

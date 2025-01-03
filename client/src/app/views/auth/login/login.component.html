@@ -1,0 +1,78 @@
+<body class="bg-white dark:bg-black">
+  <div class="body-container">
+    <div
+      class="form-container"
+      style="
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        margin-top: 10px;
+      "
+    >
+      <section class="w-1/2" hlmCard>
+        <form [formGroup]="loginForm" class="space-y-6">
+          <div hlmCardHeader style="display: flex; align-items: center">
+            <h3 hlmCardTitle>{{ "login.title" | translate }}</h3>
+            <p hlmCardDescription>{{ "login.description" | translate }}</p>
+          </div>
+          <div
+            hlmCardContent
+            style="display: flex; flex-direction: column; gap: 10px"
+          >
+            <div
+              style="display: flex; gap: 10px; justify-content: space-between"
+            >
+              <hlm-form-field style="width: 49%">
+                <input
+                  hlmInput
+                  formControlName="email"
+                  type="email"
+                  placeholder="{{ 'login.email' | translate }}"
+                  style="width: 100%"
+                />
+                <hlm-error>{{ "login.emailError" | translate }}</hlm-error>
+              </hlm-form-field>
+
+              <hlm-form-field style="width: 49%">
+                <input
+                  hlmInput
+                  type="password"
+                  placeholder="{{ 'login.password' | translate }}"
+                  style="width: 100%"
+                  formControlName="password"
+                />
+                <hlm-error>{{ "login.passwordError" | translate }}</hlm-error>
+              </hlm-form-field>
+            </div>
+            <div class="flex items-center justify-end space-x-2">
+              <h4 class="text-sm font-medium leading-none">
+                Don't have an account?
+              </h4>
+              <a
+                routerLink="/register"
+                class="text-sm text-muted-foreground underline hover:text-primary transition-colors"
+              >
+                Register
+              </a>
+            </div>
+          </div>
+          <div hlmCardFooter class="justify-between">
+            <button hlmBtn variant="ghost" (click)="resetForm()">
+              {{ "login.clear" | translate }}
+            </button>
+            <hlm-toaster />
+            <button
+              hlmBtn
+              type="submit"
+              (click)="onLogin()"
+              (ngSubmit)="onLogin()"
+              [disabled]="loginForm.invalid"
+            >
+              {{ "login.submit" | translate }}
+            </button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </div>
+</body>

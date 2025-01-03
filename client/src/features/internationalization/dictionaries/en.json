@@ -1,0 +1,55 @@
+{
+  "language": {
+    "english": "English",
+    "portuguese": "Portuguese"
+  },
+
+  "weatherData": {
+    "title": "Weather Data",
+    "description": "Add new measurement",
+    "cityPlaceholder": "City",
+    "cityError": "City is required",
+    "temperaturePlaceholder": "Temperature (°C)",
+    "temperatureError": "Temperature is required",
+    "networkPowerPlaceholder": "Network Power (1-5)",
+    "networkPowerError": "Network Power must be a number between 1 and 5",
+    "altitudePlaceholder": "Altitude (m)",
+    "altitudeError": "Altitude is required",
+    "dateError": "Date is required",
+    "rainingStatusPlaceholder": "Raining Status",
+    "rainingStatusError": "Raining Status is required",
+    "clearButton": "Clear",
+    "createButton": "Create",
+    "detailsButton": "Details"
+  },
+  "tooltip": {
+    "date": "Date:",
+    "temperature": "Temperature:",
+    "networkPower": "Network Power:",
+    "altitude": "Altitude:",
+    "raining": "Raining:"
+  },
+  "login": {
+    "title": "Login",
+    "description": "Login to your account",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Login",
+    "clear": "Clear",
+    "emailError": "Email is required",
+    "passwordError": "Password is required"
+  },
+  "register": {
+    "title": "Register",
+    "description": "Create a new account",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "submit": "Register",
+    "clear": "Clear",
+    "emailError": "Email is required",
+    "passwordError": "Password is required",
+    "confirmPasswordError": "Passwords do not match"
+  },
+  "logout": "Logout"
+}

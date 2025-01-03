@@ -1,0 +1,15 @@
+<body class="bg-white dark:bg-black">
+  <div class="navbar-container">
+    <spartan-navbar (timezoneChange)="onTimezoneChange($event)" />
+  </div>
+
+  <div class="body-container">
+    <div class="form-container">
+      <form-card class="w-1/2" (dataSubmitted)="handleDataSubmitted()" />
+    </div>
+
+    <div class="data-container">
+      <city-list [registries]="registries"></city-list>
+    </div>
+  </div>
+</body>

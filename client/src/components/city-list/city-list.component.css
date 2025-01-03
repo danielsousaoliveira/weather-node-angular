@@ -1,0 +1,13 @@
+.data-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card-data {
+  min-width: 500px;
+}

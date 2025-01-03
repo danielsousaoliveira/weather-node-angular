@@ -1,0 +1,57 @@
+<section hlmCard>
+  <div hlmCardHeader style="display: flex; align-items: center">
+    <h3 hlmCardTitle>
+      {{ selectedCityData[selectedCityData.length - 1].city }}
+    </h3>
+  </div>
+  <div hlmCardContent style="display: flex; flex-direction: column; gap: 10px">
+    <div style="display: flex; gap: 10px; justify-content: space-between">
+      <div hlmAlert style="text-align: right; width: 49%">
+        <hlm-icon hlmAlertIcon name="lucideCloudRainWind" />
+        <h4 hlmAlertTitle>
+          {{ selectedCityData[selectedCityData.length - 1].rainingStatus }}
+        </h4>
+      </div>
+
+      <div hlmAlert style="text-align: right; width: 49%">
+        <hlm-icon hlmAlertIcon name="lucideCalendar" />
+        <h4 hlmAlertTitle>
+          {{ formatDate(selectedCityData[selectedCityData.length - 1].date) }}
+        </h4>
+      </div>
+    </div>
+
+    <div style="display: flex; gap: 10px; justify-content: space-between">
+      <div hlmAlert style="text-align: right; width: 32%">
+        <hlm-icon hlmAlertIcon name="lucideThermometer" />
+        <h4 hlmAlertTitle>
+          {{ selectedCityData[selectedCityData.length - 1].temperature }}
+        </h4>
+      </div>
+
+      <div hlmAlert style="text-align: right; width: 32%">
+        <hlm-icon hlmAlertIcon name="lucideMountain" />
+        <h4 hlmAlertTitle>
+          {{ selectedCityData[selectedCityData.length - 1].altitude }}
+        </h4>
+      </div>
+      <div hlmAlert style="text-align: right; width: 32%">
+        <hlm-icon hlmAlertIcon name="lucideWifi" />
+        <h4 hlmAlertTitle>
+          {{ selectedCityData[selectedCityData.length - 1].networkPower }}
+        </h4>
+      </div>
+    </div>
+  </div>
+  <div hlmAccordion style="padding-left: 10%; padding-right: 10%">
+    <div hlmAccordionItem>
+      <button hlmAccordionTrigger>
+        {{ "weatherData.detailsButton" | translate }}
+        <hlm-icon hlmAccIcon />
+      </button>
+      <hlm-accordion-content>
+        <weather-chart [cityData]="selectedCityData"></weather-chart>
+      </hlm-accordion-content>
+    </div>
+  </div>
+</section>

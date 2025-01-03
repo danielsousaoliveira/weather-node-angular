@@ -1,0 +1,54 @@
+{
+  "language": {
+    "english": "Inglês",
+    "portuguese": "Português"
+  },
+  "weatherData": {
+    "title": "Dados Meteorológicos",
+    "description": "Adicionar nova medição",
+    "cityPlaceholder": "Cidade",
+    "cityError": "Nome da cidade é obrigatório",
+    "temperaturePlaceholder": "Temperatura (°C)",
+    "temperatureError": "Temperatura é obrigatória",
+    "networkPowerPlaceholder": "Potência de Rede (1-5)",
+    "networkPowerError": "A potência da rede deve ser um número entre 1 e 5",
+    "altitudePlaceholder": "Altitude (m)",
+    "altitudeError": "Altitude é obrigatória",
+    "dateError": "Data é obrigatória",
+    "rainingStatusPlaceholder": "Estado de Chuva",
+    "rainingStatusError": "Estado de Chuva é obrigatório",
+    "clearButton": "Limpar",
+    "createButton": "Criar",
+    "detailsButton": "Detalhes"
+  },
+  "tooltip": {
+    "date": "Data:",
+    "temperature": "Temperatura:",
+    "networkPower": "Potência de Rede:",
+    "altitude": "Altitude:",
+    "raining": "Chuva:"
+  },
+  "login": {
+    "title": "Login",
+    "description": "Insira as suas credenciais para entrar",
+    "email": "Email",
+    "password": "Senha",
+    "clear": "Limpar",
+    "submit": "Entrar",
+    "emailError": "Email é obrigatório",
+    "passwordError": "Senha é obrigatória"
+  },
+  "register": {
+    "title": "Registo",
+    "description": "Insira as suas credenciais para registrar",
+    "email": "Email",
+    "password": "Senha",
+    "confirmPassword": "Confirmar Senha",
+    "clear": "Limpar",
+    "submit": "Registrar",
+    "emailError": "Email é obrigatório",
+    "passwordError": "Senha é obrigatória",
+    "confirmPasswordError": "As senhas não coincidem"
+  },
+  "logout": "Terminar sessão"
+}

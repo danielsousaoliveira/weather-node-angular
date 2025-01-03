@@ -1,0 +1,10 @@
+<ng-container *ngIf="cityData.length > 0">
+  <apx-chart
+    [series]="chartData"
+    [chart]="chartOptions.chart"
+    [xaxis]="chartOptions.xaxis"
+    [yaxis]="chartOptions.yaxis"
+    [tooltip]="chartOptions.tooltip"
+  >
+  </apx-chart>
+</ng-container>

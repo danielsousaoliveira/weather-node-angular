@@ -1,0 +1,13 @@
+.div-card {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.div-width-half {
+  width: 49%;
+}
+
+.div-width-full {
+  width: 100%;
+}

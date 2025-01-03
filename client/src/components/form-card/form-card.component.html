@@ -1,0 +1,107 @@
+<section class="w-full" hlmCard>
+  <form [formGroup]="form" class="space-y-6" (ngSubmit)="showToast()">
+    <div hlmCardHeader style="display: flex; align-items: center">
+      <h3 hlmCardTitle>{{ "weatherData.title" | translate }}</h3>
+      <p hlmCardDescription>{{ "weatherData.description" | translate }}</p>
+    </div>
+    <div
+      hlmCardContent
+      style="display: flex; flex-direction: column; gap: 10px"
+    >
+      <div style="display: flex; gap: 10px; justify-content: space-between">
+        <hlm-form-field style="width: 49%">
+          <input
+            hlmInput
+            formControlName="city"
+            type="text"
+            placeholder="{{ 'weatherData.cityPlaceholder' | translate }}"
+            style="width: 100%"
+          />
+          <hlm-error>{{ "weatherData.cityError" | translate }}</hlm-error>
+        </hlm-form-field>
+
+        <hlm-form-field style="width: 49%">
+          <input
+            hlmInput
+            type="number"
+            placeholder="{{ 'weatherData.temperaturePlaceholder' | translate }}"
+            style="width: 100%"
+            formControlName="temperature"
+          />
+          <hlm-error>{{
+            "weatherData.temperatureError" | translate
+          }}</hlm-error>
+        </hlm-form-field>
+      </div>
+
+      <div style="display: flex; gap: 10px; justify-content: space-between">
+        <hlm-form-field style="width: 49%">
+          <input
+            hlmInput
+            type="number"
+            placeholder="{{
+              'weatherData.networkPowerPlaceholder' | translate
+            }}"
+            style="width: 100%"
+            formControlName="networkPower"
+          />
+          <hlm-error>{{
+            "weatherData.networkPowerError" | translate
+          }}</hlm-error>
+        </hlm-form-field>
+
+        <hlm-form-field style="width: 49%">
+          <input
+            hlmInput
+            type="number"
+            placeholder="{{ 'weatherData.altitudePlaceholder' | translate }}"
+            style="width: 100%"
+            formControlName="altitude"
+          />
+          <hlm-error>{{ "weatherData.altitudeError" | translate }}</hlm-error>
+        </hlm-form-field>
+      </div>
+
+      <div style="display: flex; gap: 10px; justify-content: space-between">
+        <hlm-form-field style="width: 49%">
+          <input
+            hlmInput
+            type="datetime-local"
+            style="width: 100%"
+            formControlName="date"
+          />
+          <hlm-error>{{ "weatherData.dateError" | translate }}</hlm-error>
+        </hlm-form-field>
+
+        <hlm-form-field style="width: 49%">
+          <input
+            hlmInput
+            type="text"
+            placeholder="{{
+              'weatherData.rainingStatusPlaceholder' | translate
+            }}"
+            style="width: 100%"
+            formControlName="rainingStatus"
+          />
+          <hlm-error>{{
+            "weatherData.rainingStatusError" | translate
+          }}</hlm-error>
+        </hlm-form-field>
+      </div>
+    </div>
+    <div hlmCardFooter class="justify-between">
+      <button hlmBtn variant="ghost" (click)="resetForm()">
+        {{ "weatherData.clearButton" | translate }}
+      </button>
+      <hlm-toaster />
+      <button
+        hlmBtn
+        type="submit"
+        (click)="showToast()"
+        [disabled]="form.invalid"
+      >
+        {{ "weatherData.createButton" | translate }}
+      </button>
+    </div>
+  </form>
+</section>

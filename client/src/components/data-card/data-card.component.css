@@ -1,0 +1,31 @@
+.class-header {
+  display: flex;
+  align-items: center;
+}
+
+.class-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.class-div {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.class-alert-half {
+  text-align: right;
+  width: 49%;
+}
+
+.class-alert-third {
+  text-align: right;
+  width: 32%;
+}
+
+.class-accordion {
+  padding-left: 10%;
+  padding-right: 10%;
+}

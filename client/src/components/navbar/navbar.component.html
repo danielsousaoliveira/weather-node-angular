@@ -1,0 +1,70 @@
+<hlm-menu-bar class="w-fit">
+  <button hlmMenuBarItem [brnMenuTriggerFor]="profile">
+    <hlm-icon size="sm" name="lucideUserCircle2" />
+  </button>
+  <button hlmMenuBarItem [brnMenuTriggerFor]="timeZone">
+    <hlm-icon size="sm" name="lucideGlobe" />
+  </button>
+  <button hlmMenuBarItem (click)="toggleDarkMode()">
+    <hlm-icon size="sm" [name]="isDarkMode ? 'lucideMoon' : 'lucideSun'" />
+  </button>
+  <button hlmMenuBarItem [brnMenuTriggerFor]="language">
+    <hlm-icon size="sm" name="lucideLanguages" />
+  </button>
+</hlm-menu-bar>
+
+<ng-template #timeZone>
+  <hlm-menu variant="menubar" class="w-48">
+    <button
+      hlmMenuItem
+      (click)="setTimezone('UTC')"
+      [class.font-bold]="selectedTimezone === 'UTC'"
+    >
+      UTC
+    </button>
+    <button
+      hlmMenuItem
+      (click)="setTimezone('PST')"
+      [class.font-bold]="selectedTimezone === 'PST'"
+    >
+      PST
+    </button>
+    <button
+      hlmMenuItem
+      (click)="setTimezone('EST')"
+      [class.font-bold]="selectedTimezone === 'EST'"
+    >
+      EST
+    </button>
+  </hlm-menu>
+</ng-template>
+
+<ng-template #language>
+  <hlm-menu variant="menubar">
+    <button
+      hlmMenuItem
+      (click)="switchLanguage('en')"
+      [class.font-bold]="selectedLanguage === 'en'"
+    >
+      {{ "language.english" | translate }}
+    </button>
+    <button
+      hlmMenuItem
+      (click)="switchLanguage('pt')"
+      [class.font-bold]="selectedLanguage === 'pt'"
+    >
+      {{ "language.portuguese" | translate }}
+    </button>
+  </hlm-menu>
+</ng-template>
+
+<ng-template #profile>
+  <hlm-menu variant="menubar">
+    <div hlmMenuItem>
+      {{ "Admin" }}
+    </div>
+    <button hlmMenuItem (click)="logOut()">
+      {{ "logout" | translate }}
+    </button>
+  </hlm-menu>
+</ng-template>
